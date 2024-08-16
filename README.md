@@ -7,7 +7,15 @@ The Lambda function fetches all EBS snapshots owned by the same account ('self')
 ### Example
 A person creates an EC2 instance and takes a snapshot every day for backup purposes. Since snapshots are chargeable by AWS, we don't need to keep the old ones. We can delete them to optimize costs.
 
-### Implementation
-- Go to EC2 Dashboard
+## Implementation
+### Creating EC2 and Snapshot
+- Go to AWS Console
+- Navigate the EC2
 - Create the EC2 Instance
-- Navigate Snapshots and create the snapshot
+- Create the Snapshot
+
+### Creating Lambda Function
+- Go to AWS Console
+- Navigate Lambda Function
+- Create Function
+  - Author from scratch => Function name(cost-optimize-ebs-snpshot) => Runtime (Python 3.12) => Create Function
