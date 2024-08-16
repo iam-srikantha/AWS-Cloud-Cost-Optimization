@@ -19,3 +19,8 @@ A person creates an EC2 instance and takes a snapshot every day for backup purpo
 - Navigate Lambda Function
 - Create Function
   - Author from scratch => Function name(cost-optimize-ebs-snpshot) => Runtime (Python 3.12) => Create Function
+  - Go to github Account @iam-srikantha Navigate the AWS-Cloud-Cost-Optimization/ebs_stale_snapshots.py > Copy the code
+  - Go back created Lambda function > scrolldown > Code > lambda function - Replace that Code > Save this code using Cntrl+S > Deploy > then Test Project > provide the event name - test(Because we mannually triggering the Event) > Save
+- Failed
+- ![image](https://github.com/user-attachments/assets/378e60c5-482e-4396-ab8b-8f67292c29ee)
+
