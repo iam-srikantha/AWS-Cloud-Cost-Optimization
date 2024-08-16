@@ -30,5 +30,11 @@ A person creates an EC2 instance and takes a snapshot every day for backup purpo
      1. create policies > IAM > Policies > create policy > Service - EC2 > Filter Action search - Write(Delete Snapshot), List(Describe snapshot), Resources(All) > Next > Policy Name (cost-optimization-ebs) > create policy
      2. create policies > IAM > Policies > create policy > Service - EC2 > Filter Action search - List(Describevolume), (Describeinstance) > Next > Policy Name (ec2-permission > create policy)
 
-#### Note: Now Terminate the EC2 instance that instance will delete the volume as well but snapshot cannot be deleted
+#### Note: Now Delete the created EC2 instance that instance will delete the volume as well but snapshot cannot be deleted
+
+#### Now We can Test the Lambda Function
+#### See Status : Success 
+#### Script will Executed and Delete the Snapshot also.
+![image](https://github.com/user-attachments/assets/07fede15-ed55-468e-bc3b-f416201285dd)
+
 
