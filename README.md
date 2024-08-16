@@ -21,6 +21,10 @@ A person creates an EC2 instance and takes a snapshot every day for backup purpo
   - Author from scratch => Function name(cost-optimize-ebs-snpshot) => Runtime (Python 3.12) => Create Function
   - Go to github Account @iam-srikantha Navigate the AWS-Cloud-Cost-Optimization/ebs_stale_snapshots.py > Copy the code
   - Go back created Lambda function > scrolldown > Code > lambda function - Replace that Code > Save this code using Cntrl+S > Deploy > then Test Project > provide the event name - test(Because we mannually triggering the Event) > Save
-- Failed
+- Status- Failed Because bydefault the lambda function execution is only 3 seconds and it is also failing some permission also.
 - ![image](https://github.com/user-attachments/assets/378e60c5-482e-4396-ab8b-8f67292c29ee)
-
+- Go to Configuration > Edit > Timeout change the time 10 seconds - Save
+- Provide Permission
+   Configuration > Permission > click cost-optimize-ebs-snpshot-role link > Add permission > Attach policies > attach existing policies (How to creating the policies refer to below lines) > after attaching the policies - Add permission.
+     1. create policies > IAM > Policies > create policy > Service - EC2 > Filter Action search - Write(Delete Snapshot), List(Describe snapshot), Resources(All) > Next > Policy Name (cost-optimization-ebs) > create policy
+     2. create policies > IAM > Policies > create policy > Service - EC2 > Filter Action search - List(Describevolume), (Describeinstance) > Next > Policy Name (ec2-permission > create policy)
